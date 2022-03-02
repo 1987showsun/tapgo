@@ -4,9 +4,11 @@
  */
 const Index = () => {
     return(
-        <main>
-            Dashboard
-        </main>
+        <>
+            <div className="main-row order-head">
+                <div className="page-title">Dashboard</div>
+            </div>
+        </>
     );
 }
 

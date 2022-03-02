@@ -2,24 +2,20 @@
  *   Copyright (c) 2022 
  *   All rights reserved.
  */
-import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 // Actions
 import { signinAction } from '../../../redux/actions/sign';
 
 const Index = () => {
 
-    let navigate = useNavigate();
     const dispatch = useDispatch();
-    const AUTH_TOKEN = useSelector(state => state.sign.token);
     const [ stateForm, setForm ] = useState({
         username: "",
         password: ""
     });
-
-    console.log('==>',AUTH_TOKEN);
 
     const handleChange = e => {
         const { name="", value="" } = e.target;
@@ -54,6 +50,9 @@ const Index = () => {
             </div>
             <div className="form-item">
                 <button type="submit">Sign in</button>
+            </div>
+            <div className="form-item">
+                <Link to="/sign/up" className='signup-href'>Sign Up</Link>
             </div>
         </form>
     );
