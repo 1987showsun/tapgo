@@ -1,0 +1,73 @@
+/*
+ *   Copyright (c) 2022 
+ *   All rights reserved.
+ */
+
+.order-head{
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .page-title{
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    button{
+        display: inline-flex;
+        margin-right: 10px;
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+}
+
+.output-form-btn{
+    height: 35px;
+    background: #5c60f5;
+    padding: 0px 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 0.375rem;
+    i{
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.search-input-customization{
+    width: 100%;
+    min-height: 40px;
+    padding: 0px;
+    >div{
+        min-height: 40px !important;
+        padding: 0px 10px;
+    }
+}
+
+.order-filter-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    .form-item{
+       margin-bottom: 10px;
+       &:last-child{
+           margin-right: 0px;
+       }
+       &[data-both="true"]{
+           display: flex;
+       }
+       &.both-btn-item{
+           button{
+               margin-right: 10px;
+               &:last-child{
+                   margin-right: 0px;
+               }
+           }
+       }
+    }
+}
